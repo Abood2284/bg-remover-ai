@@ -31,37 +31,23 @@ export function PageContent() {
       console.log('Image Uploaded... Running Replicate');
       console.log('Attempt #3');
       
-    //   const replicate = new Replicate({
-    //     auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
-    //   });
-      
-    //   const output = await replicate.run(
-    //     "cjwbw/rembg:fb8af171cfa1616ddcf1242c093f9c46bcada5ad4cf6f2fbe8b81b330ec5c003",
-    //     {
-    //       input: {
+      const replicate = new Replicate({
+        baseUrl: "https://bg-remover-ai.web.app/",
+        auth: "r8_5M3I56ncdfcVv8qd23MfZoC4HyuVZ3Z4W0oYD",
+
+      });
+      const output = await replicate.run(
+        "cjwbw/rembg:fb8af171cfa1616ddcf1242c093f9c46bcada5ad4cf6f2fbe8b81b330ec5c003",
+        {
+          input: {
             
-    //         image: fileUrl,
-    //       }
-    //     }
-    //   );
-    //   console.log(output);
-    // }
-
-const replicate = new Replicate({
-  baseUrl: "https://bg-remover-ai.web.app",
-  auth: "r8_5M3I56ncdfcVv8qd23MfZoC4HyuVZ3Z4W0oYD",
-});
-
-const output = await replicate.run(
-  "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
-  {
-    input: {
-      prompt: "An astronaut riding a rainbow unicorn"
+            image: fileUrl,
+          }
+        }
+      );
+      console.log(output);
     }
-  }
-);
-console.log(output);
-  };
+
 }
 
   return (
