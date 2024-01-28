@@ -29,7 +29,7 @@ export function PageContent() {
       // Do something with the fileUrl
       console.log(fileUrl);
       console.log('Image Uploaded... Running Replicate');
-      console.log('Attempt #3');
+      console.log('Attempt #4');
       
       const replicate = new Replicate({
         baseUrl: "https://bg-remover-ai.web.app/",
