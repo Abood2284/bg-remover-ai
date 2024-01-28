@@ -29,7 +29,7 @@ export function PageContent() {
       // Do something with the fileUrl
       console.log(fileUrl);
       console.log('Image Uploaded... Running Replicate');
-      console.log('Firebase Replicate');
+      console.log('Attempt #2');
       
     //   const replicate = new Replicate({
     //     auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
@@ -48,6 +48,16 @@ export function PageContent() {
     // }
 
 const replicate = new Replicate({
+  baseUrl: "https://bg-remover-ai.web.app",
+  fetch(input, init) {
+    return fetch(input, {
+      ...init,
+      headers: {
+        ...init?.headers ?? {},
+        "Content-Type": "application/json",
+      },
+    });
+  },
   auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
 });
 
