@@ -29,7 +29,7 @@ export function PageContent() {
       // Do something with the fileUrl
       console.log(fileUrl);
       console.log('Image Uploaded... Running Replicate');
-      console.log('Attempt #2');
+      console.log('Attempt #3');
       
     //   const replicate = new Replicate({
     //     auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
@@ -49,17 +49,7 @@ export function PageContent() {
 
 const replicate = new Replicate({
   baseUrl: "https://bg-remover-ai.web.app",
-  fetch(input, init) {
-    return fetch(input, {
-      ...init,
-      headers: {
-        ...init?.headers ?? {},
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-    });
-  },
-  auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
+  auth: "r8_5M3I56ncdfcVv8qd23MfZoC4HyuVZ3Z4W0oYD",
 });
 
 const output = await replicate.run(
