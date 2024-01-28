@@ -32,7 +32,7 @@ export function PageContent() {
       console.log('Attempt #4');
       
       const replicate = new Replicate({
-        baseUrl: "https://bg-remover-ai.web.app/",
+        // baseUrl: "https://bg-remover-ai.web.app/",
         auth: "r8_5M3I56ncdfcVv8qd23MfZoC4HyuVZ3Z4W0oYD",
 
       });
