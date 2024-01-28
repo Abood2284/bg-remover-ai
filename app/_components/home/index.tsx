@@ -29,6 +29,7 @@ export function PageContent() {
       // Do something with the fileUrl
       console.log(fileUrl);
       console.log('Image Uploaded... Running Replicate');
+      console.log('Firebase Replicate');
       
     //   const replicate = new Replicate({
     //     auth: "r8_NgRczmKnhOz8G5QrVK53l2OJt3Kkokb0Ewhm9",
